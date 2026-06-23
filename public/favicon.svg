@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="13" fill="#14110f"/>
+  <!-- brass blade (yours) -->
+  <line x1="16" y1="48" x2="46" y2="16" stroke="#f4d58d" stroke-width="4" stroke-linecap="round"/>
+  <!-- crimson blade (opponent) -->
+  <line x1="48" y1="48" x2="18" y2="16" stroke="#e8473f" stroke-width="4" stroke-linecap="round"/>
+  <!-- clash spark -->
+  <circle cx="32" cy="32" r="4.4" fill="#f3ece0"/>
+</svg>

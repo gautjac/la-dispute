@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #14110f;
+  /* a faint chamber-floor texture: warm + cold pools meeting in the centre */
+  background-image:
+    radial-gradient(120% 80% at 12% -10%, rgba(216, 169, 63, 0.12), transparent 55%),
+    radial-gradient(120% 80% at 88% -10%, rgba(232, 71, 63, 0.12), transparent 55%),
+    radial-gradient(90% 60% at 50% 120%, rgba(127, 166, 196, 0.07), transparent 60%);
+  background-attachment: fixed;
+  color: #f3ece0;
+  font-family: "Libre Franklin", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display banner type: tighten the condensed face. */
+.banner {
+  font-family: "Anton", Impact, sans-serif;
+  letter-spacing: 0.01em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.prose-arg {
+  font-family: "Spectral", Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.66;
+}
+.prose-arg p {
+  margin: 0 0 0.85em;
+}
+.prose-arg p:last-child {
+  margin-bottom: 0;
+}
+
+/* Custom selection colours per side via utility classes. */
+.sel-mine ::selection {
+  background: rgba(244, 213, 141, 0.35);
+}
+.sel-foe ::selection {
+  background: rgba(232, 71, 63, 0.35);
+}
+
+/* Thin, dark scrollbars. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #48403a transparent;
+}
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #322b25;
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #48403a;
+}
+
+textarea {
+  font-family: inherit;
+}
+
+/* Focus ring kept legible on the dark ground. */
+:focus-visible {
+  outline: 2px solid #f4d58d;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
